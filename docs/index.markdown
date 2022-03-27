@@ -1,5 +1,5 @@
 ---
-title: "Frontpage"
+title: "Página principal"
 layout: home
 ---
 
