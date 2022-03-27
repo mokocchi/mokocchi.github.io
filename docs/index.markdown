@@ -1,6 +1,7 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
+title: "Frontpage"
 layout: home
 ---
+
+# Bitácora del capitán
+Un blog en el que pruebo cosas de electrónica y programación
