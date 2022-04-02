@@ -4,7 +4,7 @@ title: "Virtualbox con secure boot"
 date: 2022-04-02 17:00:00 -0300
 categories: virtualizacion
 author: Jose Arcidiacono (@mokocchi)
-permalink: 2022-04-02-Virtualizacion-con-secure-boot
+permalink: 2022-04-02-Virtualbox-con-secure-boot
 ---
 
 Una de mis preocupaciones con el proyecto de Morse con luz ([Parte I](2022-03-28-Morse-I), [Parte II](2022-03-28-Morse-II)) era quemar el flash de mi celular, así que me prestaron uno fuera de uso. Es de esos que se pueden programar en java, pero viene de la época en que los drivers venían en un CD aparte.
@@ -48,7 +48,7 @@ En los inicios del Secure Boot, para poner una firma nueva en el arranque había
 Para evitar este problema existe Shim. Es una aplicación EFI que primero intenta cargar el arranque de forma normal, pero si Secure Boot está habilitado chequea una lista propia de claves.
 
 ## Tutorial
-(sacado de https://unix.stackexchange.com/questions/560895/sign-kernel-modules)
+(sacado de (https://unix.stackexchange.com/questions/560895/sign-kernel-modules))
 
 Para cargar una clave propia o MOK (Machine Owner Key, "Clave del propietario de la máquina") primero hay que crear una:
 ```
@@ -64,7 +64,7 @@ mokutil --import MOK.der
 ```
 Pide una contraseña de un solo uso que permite entrar al gestor de claves en el próximo arranque.
 
-Para cargarla acá hay una guía con capturas de pantalla: https://gist.github.com/reillysiemens/ac6bea1e6c7684d62f544bd79b2182a4
+Para cargarla acá hay una guía con capturas de pantalla: (https://gist.github.com/reillysiemens/ac6bea1e6c7684d62f544bd79b2182a4)
 
 Los pasos a seguir son:
 - Elegir Enroll MOK
