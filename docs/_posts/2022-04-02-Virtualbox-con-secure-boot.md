@@ -22,9 +22,9 @@ Para evitar que se instale código malicioso en el sistema, con Secure Boot no s
 
 Esto es un arreglo de Microsoft con los fabricantes de hardware, que tienen que incluir la funcionalidad en sus computadoras si quieren ser compatibles con Windows. Hasta Windows 10, era opcional.
 
-Hasta hace un par de años, no se podía arrancar Linux si el sistema tenía Secure Boot. Por eso la comunidad pensaba que era una movida de Microsoft para dejar Linux fuera del mercado.
+Hasta hace un par de años, no se podía arrancar Linux si el sistema tenía habilitado Secure Boot. Por eso la comunidad pensaba que era una movida de Microsoft para dejar Linux fuera del mercado.
 
-Actualmente las instalaciones de linux incluyen las firmas necesarias para arrancar, y el kernel viene firmado.
+Actualmente las instalaciones de Linux incluyen las firmas necesarias para arrancar, y el kernel viene firmado.
 
 Así que instalé mi Debian junto con Windows 11 y los dos funcionan con Secure Boot.
 
@@ -48,7 +48,7 @@ En los inicios del Secure Boot, para poner una firma nueva en el arranque había
 Para evitar este problema existe Shim. Es una aplicación EFI que primero intenta cargar el arranque de forma normal, pero si Secure Boot está habilitado chequea una lista propia de claves.
 
 ## Tutorial
-(sacado de (https://unix.stackexchange.com/questions/560895/sign-kernel-modules))
+(sacado de [acá](https://unix.stackexchange.com/questions/560895/sign-kernel-modules))
 
 Para cargar una clave propia o MOK (Machine Owner Key, "Clave del propietario de la máquina") primero hay que crear una:
 ```
@@ -64,7 +64,7 @@ mokutil --import MOK.der
 ```
 Pide una contraseña de un solo uso que permite entrar al gestor de claves en el próximo arranque.
 
-Para cargarla acá hay una guía con capturas de pantalla: (https://gist.github.com/reillysiemens/ac6bea1e6c7684d62f544bd79b2182a4)
+Para cargarla acá hay una guía con capturas de pantalla [acá](https://gist.github.com/reillysiemens/ac6bea1e6c7684d62f544bd79b2182a4)
 
 Los pasos a seguir son:
 - Elegir Enroll MOK
