@@ -70,6 +70,7 @@ Existen cuatro tipos de registros:
 ## Conjunto de instrucciones
 Este es el set de instrucciones. Los comentarios empiezan con `#` y no se ejecutan, como en Pyhton. Los enteros van de `-999` a `999`.
 ### Instrucciones básicas
+
 ```
 # no hacer nada (para rellenar loops o condiciones)
 nop
@@ -85,8 +86,11 @@ slp R/I
 
 # esperar a que haya una entrada en el pin P
 slx P
+
 ``` 
+
 ### Instrucciones aritméticas
+
 ```
 # sumar el contenido del registro R o el entero I al acumulador y guardarlo en el acumulador
 add R/I
@@ -105,8 +109,11 @@ dgt R/I
 
 # guarda el valor del registro R2 o entero I2 en el dígito del acumulador indicado por el registro R1 o el entero R2.
 dst R1/I1 R2/I2
+
 ```
+
 ### Instrucciones condicionales
+
 ```
 # chequear si los dos valores son iguales
 teq R/I R/I
@@ -141,6 +148,7 @@ tcp 3 4
 tcp 3 3
 + no_se_ejecuta
 - no_se_ejecuta
+
 ``` 
 
 ## Ahora sí el juego
