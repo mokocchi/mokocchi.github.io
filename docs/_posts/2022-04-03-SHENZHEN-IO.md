@@ -7,8 +7,6 @@ author: Jose Arcidiacono (@mokocchi)
 permalink: 2022-04-03-SHENZHEN-IO
 ---
 
-[_Nota: está al 50% en Steam hasta el 5/4/22, sale menos de 200ARS contando impuestos_]
-
 ![SHENZHEN I/O logo](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO-logo.png)
 
 Me compré el juego [SHENZHEN I/O](https://store.steampowered.com/app/504210/SHENZHEN_IO/) en Steam hace un tiempo. Le puse como 15 horas de juego y avancé bastante, pero lo abrí después de un par de meses y ya no me acuerdo casi nada.
