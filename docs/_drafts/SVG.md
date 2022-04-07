@@ -9,6 +9,8 @@ permalink: 2022-04-07-Imagenes-vectoriales-svg
 
 Hoy voy a hablar de otro de mis pasatiempos: vectorizar imágenes.
 
+## Sobre los vectores
+
 Una imagen vectorial está compuesta por elementos geométricos como puntos, rectángulos, etc. definidos
 mediante sus coordenadas. Esto quiere decir que sin importar cuanto zoom hagamos,
 la imagen se vuelve a dibujar sin pixelarse.
@@ -41,16 +43,12 @@ Si la abrimos con un editor de texto (al guardarla como .txt por ejemplo) vemos 
 
 Tenemos un `path`, es decir una ruta entre puntos. Lo primero que aparece son los estilos, `style`. Podemos ver las propiedades del trazo (`stroke`) y el relleno (`fill`). Este último es  `#ff00ff` (magenta) (ver _Nota 1: Colores_).
 
-Después de eso viene lo que quería mostrar, en `d=` tenemos tres coordenadas: ¡los puntos del triángulo!
+Después de eso viene lo que quería mostrar: en `d=` tenemos tres coordenadas: ¡los puntos del triángulo!
 
 De esta forma el editor genera la imagen. La idea no es escribir las coordenadas a mano, no temáis. Pero creo que es interesante saber cómo funciona.
 
-
-
-
-
-
-
-
 -------------------------
 _Nota 1: Colores_ Como los colores son RGB y van de 0 a FF (255 en hexadecimal), FF en rojo (R, red), 00 en verde (G, green) y FF en azul (B, blue) nos da magenta.
+
+## Herramientas
+Para crear y editar SVG (Scalable Vector Graphics - Gráficos Vectoriales Escalables)
