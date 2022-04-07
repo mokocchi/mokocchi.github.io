@@ -65,6 +65,7 @@ Existen cuatro tipos de registros:
 - `acc`: registro acumulador. El lenguaje funciona con una sola dirección (la mayoría de las veces), así que cuando no se especifica un registro, el otro operando es el acumulador
 - `dat`: es un registro extra para guardar datos en algunas partes avanzadas.
 - registros de pines: contienen el dato que se recibe o se envía de un pin. Notar que algunos pines bloquean la lectura cuando no hay un dato (son concurrentes).
+
 ## Conjunto de instrucciones
 Este es el set de instrucciones. Los comentarios empiezan con `#` y no se ejecutan, como en Pyhton. Los enteros van de `-999` a `999`.
 ### Instrucciones básicas
