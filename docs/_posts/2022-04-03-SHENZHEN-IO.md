@@ -7,7 +7,7 @@ author: Jose Arcidiacono (@mokocchi)
 permalink: 2022-04-03-SHENZHEN-IO
 ---
 
-![SHENZHEN I/O logo](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO-logo.png)
+![SHENZHEN I/O logo](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO/logo.png)
 
 Me compré el juego [SHENZHEN I/O](https://store.steampowered.com/app/504210/SHENZHEN_IO/) en Steam hace un tiempo. Le puse como 15 horas de juego y avancé bastante, pero lo abrí después de un par de meses y ya no me acuerdo casi nada.
 
@@ -153,7 +153,7 @@ tcp 3 3
 ## Ahora sí el juego
 Bueno después de todo eso se puede empezar con el primer desafío del juego: FAKE SURVEILLANCE CAMERA (cámara de vigilancia falsa).
 
-![Screenshot 1](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO-Screenshot-1.png)
+![Screenshot 1](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO/Screenshot-1.png)
 
 Esta es la pantalla de diseño. Te dan las carcasas donde tienen que entrar los chips, y hay que hacer entrar tanto los chips como las instrucciones en los chips.
 
@@ -163,7 +163,7 @@ El desarrollador anterior claramente se rindió después de hacer el primer chip
 
 En la pestaña `INFORMATION`, abajo, dice que hay que hacer que `active` y `network` (los dos círculos) reciban las señales que indica la pestaña `VERIFICATION`:
 
-![Screenshot 2](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO-Screenshot-2.png)
+![Screenshot 2](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO/Screenshot-2.png)
 
 En el gráfico, la posición baja es un 0 y la posición alta un 100.
 
@@ -190,13 +190,13 @@ Cuanto termina la ejecución vuelve a empezar, así que no hace falta un `jmp` (
 
 Podemos ver si le damos al botón `SIMULATE` que cumple con lo pedido, pero en network (el segundo carril) hay una línea roja porque siempre recibe 0:
 
-![Screenshot 3](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO-Screenshot-3.png)
+![Screenshot 3](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO/Screenshot-3.png)
 
 ### `network`, la segunda salida
 Ahora nos toca a nosotros. 
 Analicemos la salida esperada de `network` (segundo carril):
 
-![Screenshot 2](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO-Screenshot-2.png)
+![Screenshot 2](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO/Screenshot-2.png)
 
 - está 4 tiempos abajo
 - está 2 tiempos arriba
@@ -221,11 +221,11 @@ Si copiamos la misma idea del código anterior quedaría así:
 
 No hay que olvidarse de conectar `p0` con `network`:
 
-![Screenshot 4](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO-Screenshot-4.png)
+![Screenshot 4](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO/Screenshot-4.png)
 
 Finalmente le damos a `SIMULATE` y después de comprobar varias veces que funciona, nos da por bueno el prototipo:
 
-![Screenshot 5](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO-Screenshot-5.png)
+![Screenshot 5](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO/Screenshot-5.png)
 
 Si se fijan hay una forma de hacerlo con con solo 3 líneas de código... pero para eso hacen falta instrucciones que todavía no tenemos.
 
