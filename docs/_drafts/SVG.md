@@ -51,4 +51,7 @@ De esta forma el editor genera la imagen. La idea no es escribir las coordenadas
 _Nota 1: Colores_ Como los colores son RGB y van de 0 a FF (255 en hexadecimal), FF en rojo (R, red), 00 en verde (G, green) y FF en azul (B, blue) nos da magenta.
 
 ## Herramientas
-Para crear y editar SVG (Scalable Vector Graphics - Gráficos Vectoriales Escalables)
+Hay varias herramientas que sirven para crear y editar SVG (Scalable Vector Graphics - Gráficos Vectoriales Escalables), pero yo desde siempre
+uso [Inkscape](https://inkscape.org/).
+
+![Inkscape]()
