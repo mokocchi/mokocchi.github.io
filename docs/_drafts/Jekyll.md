@@ -2,7 +2,7 @@
 layout: post
 title: "Cómo hacer un blog en Jekyll"
 date: 2022-04-08 16:00:00 -0300
-categories: meta, blog
+categories: meta blog
 author: Jose Arcidiacono (@mokocchi)
 permalink: 2022-04-08-Blog-Jekyll
 ---
