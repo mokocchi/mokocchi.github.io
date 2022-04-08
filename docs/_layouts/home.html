@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div>
-  <img src="portada.png" style="height: 20em" />
+  <img src="/portada.png" style="height: 20em" />
 </div>
 
 
@@ -36,28 +36,32 @@ layout: default
 </ul>
 
 {% if site.paginate %}
-<div class="pager">
-  <ul class="pagination">
+<table>
+  <tr>
     {%- if paginator.previous_page %}
-    <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page
-        }}</a></li>
+    <td>
+      <a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page
+          }}</a>
+    </td>
     {%- else %}
-    <li>
-      <div class="pager-edge">•</div>
-    </li>
+    <td>
+        <div class="pager-edge">•</div>
+    </td>
     {%- endif %}
-    <li>
+    <td>
       <div class="current-page">{{ paginator.page }}</div>
-    </li>
+    </td>
     {%- if paginator.next_page %}
-    <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+    <td>
+      <a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a>
+    </td>
     {%- else %}
-    <li>
+    <td>
       <div class="pager-edge">•</div>
-    </li>
+    </td>
     {%- endif %}
-  </ul>
-</div>
+  </tr>
+</table>
 {%- endif %}
 
 {%- endif -%}
