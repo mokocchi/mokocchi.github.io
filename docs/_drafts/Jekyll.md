@@ -7,7 +7,7 @@ author: Jose Arcidiacono (@mokocchi)
 permalink: 2022-04-08-Blog-Jekyll
 ---
 
-A pedido del público, hoy voy a hacer un tutorial de cómo hacer un blog como este mismo.
+A pedido del público, hoy voy a hacer un tutorial de cómo hacer un blog como este mismo. 
 
 La herramienta que uso se llama [Jekyll](https://jekyllrb.com/) y está hecha en lenguaje Ruby.
 
@@ -100,4 +100,111 @@ Y ahora, sí, creamos el proyecto:
 ```
 jekyll new --skip-bundle .
 ```
+El argumento `--skip-bundle` saltea la instalación, solo genera los archivos
+(porque va a correr en el servidor de GitHub).
 
+***
+Si por alguna razón no pueden instalar Jekyll, pueden partir de los archivos en la rama `jekyll-config` de mi repositorio [jekyll-demo](https://github.com/mokocchi/jekyll-demo) copiando la carpeta `docs`:
+
+```
+git clone <link de mi repositorio copiado de GitHub>
+
+cd jekyll-demo
+
+git checkout jekyll-config
+```
+***
+## Configuración de Jekyll
+
+Hay dos archivos para editar:
+- `Gemfile`: hay que comentar (poniendo un `#` al inicio de la línea) o borrar la línea que dice `gem "jekyll"...` y agregar esta línea:
+```
+gem "github-pages", "~> 225", group: :jekyll_plugins
+```
+- `_config.yml`: hay que editar los campos entre <picos>:
+```
+title: <titulo del blog>
+email: <tu mail>
+description: >-
+  <Una descripción 
+  de varias líneas
+  acerca de tu blog.>
+baseurl: "/tu-repositorio"
+domain: tu-usuario.github.io
+url: "http://tu-usuario.github.io/"
+twitter_username: <tu twitter>
+github_username:  <tu github>
+
+theme: <tu tema elegido>
+plugins:
+  - jekyll-feed
+```
+El tema por defecto es `minima`, pero yo uso `slate`.
+
+## Layouts
+Se pueden sacar layouts (diseños de página) de los repositorios de [minima](https://github.com/jekyll/minima/tree/master/_layouts), [slate](https://github.com/pages-themes/slate/tree/master/_layouts), etc.
+
+Yo me basé en los de minima, que es para blogs (hay otros temas como slate que son para páginas).
+
+Hay que crear una carpeta `_layouts` dentro de docs. Estos layouts van a ser referenciados desde las páginas y posts usando el Front Matter (un pedazo de código YAML que sirve de metadatos) y están escritos en un lenguaje de plantillas que se apoya sobre HTML.
+
+Un conjunto de layouts ejemplo podría ser el siguiente:
+
+### `default.html`
+Una página por defecto. Podría tener este contenido:
+
+```
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "es-AR" }}">
+
+  <!-- CABECERA HTML -->
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+  </head>
+
+  <body>
+
+    <!-- CABECERA PÁGINA-->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a href="{{site.baseurl}}">
+            <h1 id="project_title">{{ site.title }}</h1>
+          </a>
+          <h2 id="project_tagline">{{ site.description }}</h2>
+          <a href="/about">Acerca de</a>
+        </header>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        {{ content }}
+      </section>
+    </div>
+
+    <!-- PIE DE PÁGINA  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>mimail[at]dominio.dom</p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
+```
+
+- `CABECERA HTML`: incluye los estilos CSS (que se van a generar a partir de archivos `.sass`) y el favicon (el ícono de la página en las pestañas, historial y marcadores).
+
+- `CABECERA_PÁGINA`: incluye el título del proyecto en un `<h1>` (título principal) y su descripción en un `<h2>` (título secundario).
+
+- `CONTENIDO`: simplemente muestra el contenido del post o la página
+
+- `PIE DE PÁGINA`: se pueden agregar datos de contacto, de copyright, etc.
+
+Van a ver que hay código entre `{{llaves}}`, es código dinámico que lee propiedades seteadas en la configuración o en el Front Matter del post o página que se está creando.
+
+### `home.html`
+La página principal:
