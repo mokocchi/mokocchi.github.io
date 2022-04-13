@@ -17,7 +17,7 @@ Hay una discusión acerca de si HTML es un lenguaje de programación o no. Segú
 
 Más allá de si lo es o no, de lo que estamos totalmente seguros es de que es un lenguaje, pero un *lenguaje de marcado* (HTML es HyperText Markup Language, lenguaje de marcardo para hipertexto).
 
-Un lenguaje de marcado básicamente es texto con etiquetas o códigos que hablan sobre ese texto y lo enriquecen. Suelen ser interpretables por máquinas y hay un montón de librerías que pueden interpretarlos.
+Un lenguaje de marcado básicamente es texto con etiquetas o códigos que hablan sobre ese texto y lo enriquecen. Suelen ser interpretables por máquinas y hay un montón de librerías para trabajar con ellos.
 
 Algunos ejemplos:
 - `HTML`: HyperText Markup Language (lenguaje de marcardo para hipertexto). Se usa para etiquetar texto para convertirlo en una página web. Algunos ejemplos de etiquetas son `<h1>` y `<input>`. Pueden tener atributos: 
@@ -36,7 +36,7 @@ Algunos ejemplos:
     </estudiante>
   </xml>
   ```
-  Además pueden tener un `schema` que sirve al programa que lo lee para validar que el contenido tenga la estructura correcta. Los servicios SOAP suelen usar XML para comunicarse entre ellos. `XHTML`, es una versión más estricta de HTML que también es XML (requiere, por ejemplo, que todas las etiquetas tengan etiqueta de cierre)
+  Además pueden tener un `schema` que sirve al programa que lo lee para validar que el contenido tenga la estructura correcta. Los servicios SOAP suelen usar XML para comunicarse entre ellos. `XHTML` es una versión más estricta de HTML que también es XML (requiere, por ejemplo, que todas las etiquetas tengan etiqueta de cierre).
 
 ## Sobre Markdown
 
@@ -58,7 +58,7 @@ html2text documento.html > destino.md
 
 Voy a ir poniendo códigos de ejemplo. Si tienen cuenta en GitHub, pueden entrar a [GitHub Gist](https://gist.github.com) y probar escribir su propio texto. Basta con poner de extensión de archivo `.md`,
 
-Primero que nada, los **títulos**. Para los que conoce HTML, equivalen a `<h1>`, `<h2>`, etc.
+Primero que nada, los **títulos**. Para los que conocen HTML, equivalen a `<h1>`, `<h2>`, etc.
 
 ```
 # Título nivel 1
@@ -135,4 +135,108 @@ Cuando dejo una lína en blanco, cambia de párrafo. Y si quiero dejar líneas e
 &nbsp;
 
 Dos líneas en blanco!
+***
+
+Siguen las **listas**.
+```
+Tres formas de hacer una lísta sin números:
+
+- un ítem
+- otro ítem
+
++ un ítem
++ otro ítem
+
+* un ítem
+* otro ítem
+
+Lista ordenada: 
+1. primer ítem
+2. segundo ítem
+```
+***
+Tres formas de hacer una lísta sin números:
+
+- un ítem
+- otro ítem
+
++ un ítem
++ otro ítem
+
+* un ítem
+* otro ítem
+
+Lista ordenada: 
+1. primer ítem
+2. segundo ítem
+***
+
+Ahora, qué pasa si quiero empezar una línea con un año?
+
+>2009. Ese fue el año de la tormenta.
+
+Se puede _escapar_ el punto con una barra invertida (`\`):
+```
+2009\. Ese fue el año de la tormenta.
+```
+***
+2009\. Ese fue el año de la tormenta.
+***
+Para decorar el texto se pueden usar cursiva, negrita, o ambas:
+
+```
+*cursiva* / _cursiva_
+
+**negrita** / __negrita__
+
+***ambas*** / ___ambas____
+```
+
+*cursiva* / _cursiva_
+
+**negrita** / __negrita__
+
+***ambas*** / ___ambas___
+
+Para quienes escriben sobre programción y/o con símbolos, existen los bloques de código y el formato de código. Se usa una fuente tipográfica monospace, es decir que todas las letras tienen en mismo ancho haciendo fácil comparar líneas y contar caracteres.
+
+<pre>
+En esta línea hay `formato de código` en el medio.
+
+```
+estas tres líneas
+
+están escritas
+
+como si fuera código de programación
+```
+</pre>
+
+***
+En esta línea hay `formato de código` en el medio.
+
+```
+estas tres líneas
+
+están escritas
+
+como si fuera código de programación
+```
+***
+
+Los **links** se escriben de la siguiente forma:
+```
+[texto](link)
+```
+***
+[texto](link)
+***
+
+Las **imágenes** se insertan de forma similar:
+
+```
+![texto alternativo](https://mokocchi.github.io/portada.png)
+```
+***
+![texto alternativo](https://mokocchi.github.io/portada.png)
 ***
