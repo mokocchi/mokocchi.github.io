@@ -4,7 +4,7 @@ title: "SHENZHEN I/O"
 date: 2022-04-03 11:00:00 -0300
 categories: juegos, assembly
 author: Jose Arcidiacono (@mokocchi)
-permalink: 2022-04-03-SHENZHEN-IO
+permalink: 2022-04-03a-SHENZHEN-IO
 ---
 
 ![SHENZHEN I/O logo](https://mokocchi.github.io/assets/images/2022-04-03-SHENZHEN-IO/logo.png)

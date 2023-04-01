@@ -6,16 +6,9 @@ layout: default
   <img src="/portada.png" style="height: 20em" />
 </div>
 
-
-{% if site.paginate %}
-{% assign posts = paginator.posts %}
-{% else %}
-{% assign posts = site.posts %}
-{% endif %}
-
-
-{%- if posts.size > 0 -%}
-{%- if page.list_title -%}
+{% if site.paginate %} {% assign posts = paginator.posts %} {% else %} {% assign
+posts = site.posts %} {% endif %} {%- if posts.size > 0 -%} {%- if
+page.list_title -%}
 <h2 class="post-list-heading">{{ page.list_title }}</h2>
 {%- endif -%}
 <ul class="post-list">
@@ -28,24 +21,24 @@ layout: default
         {{ post.title | escape }}
       </a>
     </h3>
-    {%- if site.show_excerpts -%}
-    {{ post.excerpt }}
-    {%- endif -%}
+    {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
   </li>
   {%- endfor -%}
 </ul>
 
 {% if site.paginate %}
-<table>
+<table class="paginator">
   <tr>
+    <td>
+      <div class="pager-edge">[</div>
+    </td>
     {%- if paginator.previous_page %}
     <td>
-      <a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page
-          }}</a>
-    </td>
-    {%- else %}
-    <td>
-        <div class="pager-edge">•</div>
+      <a
+        href="{{ paginator.previous_page_path | relative_url }}"
+        class="previous-page"
+        >&lt;{{ paginator.previous_page }}</a
+      >
     </td>
     {%- endif %}
     <td>
@@ -53,15 +46,14 @@ layout: default
     </td>
     {%- if paginator.next_page %}
     <td>
-      <a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a>
-    </td>
-    {%- else %}
-    <td>
-      <div class="pager-edge">•</div>
+      <a href="{{ paginator.next_page_path | relative_url }}" class="next-page"
+        >{{ paginator.next_page }}&gt;</a
+      >
     </td>
     {%- endif %}
+    <td>
+      <div class="pager-edge">]</div>
+    </td>
   </tr>
 </table>
-{%- endif %}
-
-{%- endif -%}
+{%- endif %} {%- endif -%}

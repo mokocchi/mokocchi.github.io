@@ -4,10 +4,10 @@ title: "Virtualbox con secure boot"
 date: 2022-04-02 17:00:00 -0300
 categories: virtualizacion
 author: Jose Arcidiacono (@mokocchi)
-permalink: 2022-04-02-Virtualbox-con-secure-boot
+permalink: 2022-04-02a-Virtualbox-con-secure-boot
 ---
 
-Una de mis preocupaciones con el proyecto de Morse con luz ([Parte I](2022-03-28-Morse-I), [Parte II](2022-03-28-Morse-II)) era quemar el flash de mi celular, así que me prestaron uno fuera de uso. Es de esos que se pueden programar en java, pero viene de la época en que los drivers venían en un CD aparte.
+Una de mis preocupaciones con el proyecto de Morse con luz ([Parte I](2022-03-28a-Morse-I), [Parte II](2022-03-28a-Morse-II)) era quemar el flash de mi celular, así que me prestaron uno fuera de uso. Es de esos que se pueden programar en java, pero viene de la época en que los drivers venían en un CD aparte.
 
 Por supuesto no espero que el CD sea compatible con Windows 10 u 11, por la época calculo que un Windows XP le andaría bien. Es por eso que quise instalar Virtualbox en mi notebook, para leer el CD dentro de una máquina virtual.
 

@@ -4,7 +4,7 @@ title: "Proyecto Twitter"
 date: 2022-04-02 20:00:00 -0300
 categories: arduino, iot
 author: Jose Arcidiacono (@mokocchi)
-permalink: 2022-04-02-Proyecto-Twitter-I
+permalink: 2022-04-02b-Proyecto-Twitter-I
 ---
 
 Estoy tratando de meterme en el mundo de Internet de las cosas (IoT) haciendo cosas en Arduino. Saqué de la biblioteca de la facultad un libro que se llama "Designing the Internet of Things", de Adrian McEwen y Hakim Cassimally.

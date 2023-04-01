@@ -1,0 +1,15 @@
+.nav {
+  ul {
+    margin: 0;
+  }
+  li {
+    list-style: none;
+    padding: 10px;
+    display: inline-block;
+    
+    ::before {
+      content: "➡"
+    }
+  } 
+
+}

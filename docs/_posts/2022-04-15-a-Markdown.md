@@ -4,7 +4,7 @@ title: "Markdown"
 date: 2022-04-15 19:00:00 -0300
 categories: blog
 author: Jose Arcidiacono (@mokocchi)
-permalink: 2022-04-15-Markdown
+permalink: 2022-04-15a-Markdown
 ---
 
 El otro día hice un [post](2022-04-08-Blog-Jekyll) sobre cómo hacer un blog con Jekyll y GitHub pages. Uno de los temas que quedaron pendientes fue Markdown.
@@ -20,14 +20,14 @@ Un lenguaje de marcado básicamente es texto con etiquetas o códigos que hablan
 Algunos ejemplos:
 - `HTML`: HyperText Markup Language (lenguaje de marcardo para hipertexto). Se usa para etiquetar texto para convertirlo en una página web. Algunos ejemplos de etiquetas son `<h1>` y `<input>`. Pueden tener atributos: 
 
-  ```
+  ```html
   <a href='https://google.com>Google</a>
   ```
 
   El texto `Google` está marcado con la etiqueta `a` (anchor, una referencia) y tiene el atributo `href` (HyperRefrence) que es un link a la página de Google.
 
 - `XML`: eXtensible Markup Language (lenguaje de marcado extensible). Se usa para estructurar texto en jerarquías para representar entidades con atributos. Pueden tener cualquier etiqueta. Por ejemplo:
-  ``` 
+  ```xml
   <xml>
     <estudiante>
       <nombre>Juan</nombre>
@@ -47,7 +47,7 @@ Como decía en el post que menciono al principio, en este blog escribo los artí
 
 Si saben escribir HTML y quieren ver cómo quedaría en Markdown, pueden usar la herramienta `html2text`. Se la instala con `pip` (Python)
 
-```
+```bash
 pip3 install html2text
 
 html2text documento.html > destino.md
@@ -59,7 +59,7 @@ Voy a ir poniendo códigos de ejemplo. Si tienen cuenta en GitHub, pueden entrar
 
 Primero que nada, los **títulos**. Para los que conocen HTML, equivalen a `<h1>`, `<h2>`, etc.
 
-```
+```markdown
 # Título nivel 1
 ## Título nivel 2
 ### Título nivel 3
@@ -79,7 +79,7 @@ Primero que nada, los **títulos**. Para los que conocen HTML, equivalen a `<h1>
 
 Hay una variante que usa la subrayados con `=` (igual) y `-` (menos / guion). No es muy quisquilloso con la cantidad, basta que sea uno o más:
 
-```
+```markdown
 Título nivel 1
 ===============
 
@@ -100,7 +100,7 @@ Siguiente: **párrafos**. Un párrafo en Markdown es un bloque de texto que term
 cuando poner saltos de línea (`enter`) para que sea legible el código
 pero no queremos que salgan en el texto resultante. Nota: en general no se pueden crear líneas vacías, salvo que usemos espacios HTML (`&nbsp;`)
 
-```
+```markdown
 Este es el primer párrafo. Tiene 
 varias líneas porque al final
 de cada una hay un enter, pero
@@ -170,12 +170,14 @@ Ahora, qué pasa si quiero empezar una línea con un año?
 >2009. Ese fue el año de la tormenta.
 
 Se puede _escapar_ el punto con una barra invertida (`\`):
-```
+```markdown
 2009\. Ese fue el año de la tormenta.
 ```
 ***
 2009\. Ese fue el año de la tormenta.
+
 ***
+
 Para decorar el texto se pueden usar cursiva, negrita, o ambas:
 
 ```
@@ -209,7 +211,7 @@ como si fuera código de programación
 ***
 En esta línea hay `formato de código` en el medio.
 
-```
+```markdown
 estas tres líneas
 
 están escritas
@@ -230,7 +232,7 @@ Los **links** se escriben de la siguiente forma:
 
 Las **imágenes** se insertan de forma similar:
 
-```
+```markdown
 ![texto alternativo](https://mokocchi.github.io/portada.png)
 ```
 ***
