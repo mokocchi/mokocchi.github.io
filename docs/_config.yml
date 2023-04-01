@@ -10,9 +10,12 @@ github_username:  mokocchi
 paginate: 5
 paginate_path: "/page:num/"
 show_excerpts: true
+sass:
+  sass_dir: _sass
 
 theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
   - jekyll-remote-theme 
   - jekyll-paginate
+  - jekyll-coffeescript

@@ -1,0 +1,21 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+code {
+  color: white;
+}
+
+.highlighter-rouge {
+  color: indianred;
+}
+
+#main_content_wrap {
+  background-color: #222
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
+
+h2 {
+  padding-bottom: 7px;
+}
