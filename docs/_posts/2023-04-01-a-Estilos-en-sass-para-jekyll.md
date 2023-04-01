@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Estilos en Sass para Jekyll"
-date: 2022-04-1 19:00:00 -0300
+date: 2022-04-01 19:00:00 -0300
 categories: blog
 author: Jose Arcidiacono (@mokocchi)
 permalink: 2023-04-01a-estilos-en-sass-para-jekyll
