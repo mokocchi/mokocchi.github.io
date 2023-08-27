@@ -64,18 +64,29 @@ cd git-demo
 
 Este directorio va a contener nuestro repositorio git.
 
-En este punto podemos abrir el directorio con VSCode.
-
 Inicializamos nuestro repositorio con
 
 ```terminal
 git init
 ```
 
-Esto crea un directorio `.git` donde se guardan los archivos del índice.
+Esto crea un directorio `.git` donde se guardan los archivos del índice. (Lo podemos ver con 
+
+```terminal
+ls -a
+```
+
+)
 
 ## git commit
 
 Un commit un registro de los cambios que queremos guardar en el índice. Los cambios son líneas agregadas, quitadas o modificadas, o creaciones y borrados de archivos completos. Cada commit se identifica su SHA-1*.
 
-_*Es un string de 40 dígitos hexadecimales, un hash de resumen, que hasta hace un tiempo era teóricamente único. Recientemente se descubrieron colisiones en SHA-1 y se está proyectando pasar a usar SHA-256._
+Creamos un archivo `README.md`:
+
+```terminal
+touch README.md
+```
+
+
+_* Es un string de 40 dígitos hexadecimales, un hash de resumen, que hasta hace un tiempo era teóricamente único. Recientemente se descubrieron colisiones en SHA-1 y se está proyectando pasar a usar SHA-256._
